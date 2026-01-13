@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "questions",
+  "info": {
+    "singularName": "question",
+    "pluralName": "questions",
+    "displayName": "Question"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "module": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "TCF_LISTENING",
+        "TCF_READING",
+        "TCF_STRUCTURE",
+        "IELTS_LISTENING",
+        "IELTS_READING"
+      ]
+    },
+    "level": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "LEVEL_A1",
+        "LEVEL_A2",
+        "LEVEL_B1",
+        "LEVEL_B2",
+        "LEVEL_C1",
+        "LEVEL_C2"
+      ]
+    },
+    "choiceA": {
+      "type": "string"
+    },
+    "choiceB": {
+      "type": "string"
+    },
+    "choiceC": {
+      "type": "string"
+    },
+    "choiceD": {
+      "type": "string"
+    },
+    "correctAnswer": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    "explanation": {
+      "type": "blocks"
+    }
+  }
+}

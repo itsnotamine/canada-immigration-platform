@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "consulting_requests",
+  "info": {
+    "singularName": "consulting-request",
+    "pluralName": "consulting-requests",
+    "displayName": "ConsultingRequest"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "full_name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "phone": {
+      "type": "string"
+    },
+    "message": {
+      "type": "blocks",
+      "required": true
+    },
+    "request_status": {
+      "type": "enumeration",
+      "required": true,
+      "default": "NEW",
+      "enum": [
+        "NEW",
+        "IN_PROGRESS",
+        "DONE"
+      ]
+    }
+  }
+}

@@ -1,0 +1,41 @@
+services:
+  postgres:
+    image: postgres:15
+    platform: linux/arm64
+    container_name: tcf_postgres
+    restart: always
+    environment:
+      POSTGRES_DB: tcf_db
+      POSTGRES_USER: tcf_user
+      POSTGRES_PASSWORD: tcf_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  strapi:
+    build: .
+    container_name: tcf_strapi
+    restart: always
+    depends_on:
+      - postgres
+    ports:
+      - "1337:1337"
+    environment:
+      DATABASE_HOST: postgres
+      DATABASE_PORT: 5432
+      DATABASE_NAME: tcf_db
+      DATABASE_USERNAME: tcf_user
+      DATABASE_PASSWORD: tcf_password
+      DATABASE_SSL: "false"
+
+      NODE_ENV: production
+
+      ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET}
+      JWT_SECRET: ${JWT_SECRET}
+      API_TOKEN_SALT: ${API_TOKEN_SALT}
+      APP_KEY_1: ${APP_KEY_1}
+      APP_KEY_2: ${APP_KEY_2}
+
+volumes:
+  postgres_data:

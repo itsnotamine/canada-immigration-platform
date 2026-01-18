@@ -10,10 +10,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: tcf-backend
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

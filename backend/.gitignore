@@ -1,0 +1,12 @@
+# Base SQLite locale (recréée automatiquement au démarrage, schéma versionné dans le code)
+app.db
+
+# Secrets locaux
+.env
+
+# Environnement virtuel Python
+venv/
+
+# Cache Python
+__pycache__/
+*.pyc

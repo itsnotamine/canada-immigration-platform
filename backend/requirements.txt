@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+pydantic
+anthropic
+
+# Optionnel — à ajouter uniquement si tu branches un vrai paiement Stripe
+# (voir les commentaires dans routers/payments.py)
+# stripe

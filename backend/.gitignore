@@ -1,3 +1,5 @@
+.DS_Store
+
 # Base SQLite locale (recréée automatiquement au démarrage, schéma versionné dans le code)
 app.db
 

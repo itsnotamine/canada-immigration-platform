@@ -1,0 +1,7 @@
+<svg width="440" height="100" viewBox="0 0 440 100" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>GeneralPass</title>
+  <desc>Logo GeneralPass : badge navy avec coche dorée et texte "GeneralPass"</desc>
+  <rect x="10" y="10" width="80" height="80" rx="20" fill="#0F1B2D" />
+  <path d="M30 54 L44 68 L70 32" fill="none" stroke="#C89B3C" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="108" y="63" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="38" fill="#0F1B2D">General<tspan fill="#2F5DE3">Pass</tspan></text>
+</svg>
